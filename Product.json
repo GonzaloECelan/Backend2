@@ -1,0 +1,56 @@
+[
+	{
+		"id": 1,
+		"title": "Monitor Lg ",
+		"description": "Monitor Lg 24' ",
+		"price": 58000,
+		"img": "imagen monitor ",
+		"code": 668,
+		"stock": 25
+	},
+	{
+		"id": 2,
+		"title": "Televisor Samsung",
+		"description": "Televisor 55'",
+		"price": 190000,
+		"img": "imagen tv",
+		"code": 669,
+		"stock": 25
+	},
+	{
+		"id": 3,
+		"title": "Heladera",
+		"description": "Helader dos puertas",
+		"price": 130000,
+		"img": "imagen heladera",
+		"code": 670,
+		"stock": 25
+	},
+	{
+		"id": 4,
+		"title": "Impresora Hp",
+		"description": "Impresora 19-400d",
+		"price": 56000,
+		"img": "imagen impresora",
+		"code": 5349,
+		"stock": 25
+	},
+	{
+		"id": 5,
+		"title": "Celular Motorola",
+		"description": "Celular Motorol 6.7'",
+		"price": 156000,
+		"img": "imagen celular",
+		"code": 5350,
+		"stock": 25
+	},
+	{
+		"id": 6,
+		"title": "Monitor Samsung ",
+		"description": "Monitor Samsung 24' ",
+		"price": 46000,
+		"img": "imagen monitor ",
+		"code": 680,
+		"stock": 25
+	}
+]
