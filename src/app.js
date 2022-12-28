@@ -13,32 +13,30 @@ app.use(express.urlencoded({extended:true}));
 
 // parseo de productos.json
 const textProduct = fs.readFileSync('./src/Product.json', 'utf-8');
-const productParse = JSON.parse(textProduct);
+const ListProducts = JSON.parse(textProduct);
 
 
-
-app.get('/products',  async (req,res)=>{
-    res.sendFile(__dirname + '/src/Product.json')
-})
-
-
-app.get('/', async (req,res)=>{
-    let limit = req.query.limit;
-    if(!limit){
-        return res.send(productParse)
+app.get('/products', async (req,res)=>{
+    let limitProduct = req.query.limit;
+    if(!limitProduct){
+        return res.send({ListProducts});
     }else{
-       let filterProduct = productParse.filter(u => u == limit)
-       return res.send(filterProduct)
+       let filterProductLimit = ListProducts.filter((product,indice) => indice < limitProduct)
+       return res.send({filterProductLimit})
     }
+  
 
 })
 app.get('/products/:id', async (req,res)=>{
     let idProduct = req.params.id;
-    if(!idProduct){
+    if(idProduct == 0){
         return res.send('Error found')
     }else{
-        const findProductId = productParse.find(u=>u.id == idProduct)
-        return res.send(findProductId);
+        const findProductId = ListProducts.find(u=>u.id == idProduct)
+        
+        return res.send({findProductId})
+ 
+        
     }
 
 })
